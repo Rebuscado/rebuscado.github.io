@@ -1,0 +1,15 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html
+
+.background {
+    height: 100vh;
+    background-image: url('images/background.jpg');
+    background-position: center;
+}
+
