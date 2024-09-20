@@ -1,15 +1,50 @@
-/* Reset básico */
-* {
+/* Font similar to LaTeX for PDF-like reading */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap');
+
+/* Body setup for PDF-like page display */
+body {
+    background-color: #e0e0e0; /* Light gray background like a PDF viewer */
+    font-family: 'Crimson Pro', serif; /* A serif font similar to LaTeX */
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-html
+/* Slide-down animation */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);  /* Comienza 100px por encima de su posición original */
+        opacity: 0;                     /* Comienza siendo invisible */
+    }
+    100% {
+        transform: translateY(0);       /* Llega a su posición original */
+        opacity: 1;                     /* Se vuelve completamente visible */
+    }
+}
 
-.background {
-    height: 100vh;
-    background-image: url('images/background.jpg');
-    background-position: center;
+/* Container to resemble the page of a PDF */
+.pdf-view {
+    background-color: white;
+    width: 800px; /* Approximate width of a PDF */
+    min-height: 1120px; /* Approximate height of a PDF page */
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Shadow to make it look like a page */
+    animation: slideDown 1.5s ease-out forwards;  /* Aplica la animación y asegura que el estado final se mantenga */
+    transform: translateY(-100px);       /* Empieza fuera de la pantalla */
+    opacity: 0;                          /* Para asegurar que es invisible al inicio */
+    border: 1px solid #ccc;
+    margin: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header styling for LaTeX-like appearance */
+header {
+    text-align: center;
+    margin-bottom: 50px;
 }
 

@@ -1,0 +1,23 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.background {
+    height: 100vh;
+    background-image: url('../images/background.jpg');
+    background-position: center;
+}
+
+.profile_header_bg {
+    position: relative;
+    max-width: 1018px;
+    min-height: 224px;
+    background-color: aqua;
+    margin: 0px auto;
+    // background-repeat: no-repeat;
+    // background-position: center bottom;
+}
