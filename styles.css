@@ -1,10 +1,15 @@
 /* Font similar to LaTeX for PDF-like reading */
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap');
 
+* {
+    scrollbar-color: #454a4d #202324;
+}
+
 /* Body setup for PDF-like page display */
 body {
-    background-color: #e0e0e0; /* Light gray background like a PDF viewer */
-    font-family: 'Crimson Pro', serif; /* A serif font similar to LaTeX */
+    background-color: rgb(42, 45, 47);
+    color: #d3d3d3; /* Light gray for general text */
+    font-family: 'Crimson Pro', serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -17,25 +22,26 @@ body {
 /* Slide-down animation */
 @keyframes slideDown {
     0% {
-        transform: translateY(-100px);  /* Comienza 100px por encima de su posición original */
-        opacity: 0;                     /* Comienza siendo invisible */
+        transform: translateY(-100px);
+        opacity: 0;
     }
     100% {
-        transform: translateY(0);       /* Llega a su posición original */
-        opacity: 1;                     /* Se vuelve completamente visible */
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
 /* Container to resemble the page of a PDF */
 .pdf-view {
-    background-color: white;
-    width: 800px; /* Approximate width of a PDF */
-    min-height: 1120px; /* Approximate height of a PDF page */
+    background-color: rgb(24, 26, 27);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 20px;
+    border-color: rgb(62, 68, 70);
+    width: 800px;
+    min-height: 1120px;
     padding: 50px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Shadow to make it look like a page */
-    animation: slideDown 1.5s ease-out forwards;  /* Aplica la animación y asegura que el estado final se mantenga */
-    transform: translateY(-100px);       /* Empieza fuera de la pantalla */
-    opacity: 0;                          /* Para asegurar que es invisible al inicio */
+    animation: slideDown 1.5s ease-out forwards;
+    transform: translateY(-100px);
+    opacity: 0;
     border: 1px solid #ccc;
     margin: 30px;
     position: relative;
@@ -48,3 +54,58 @@ header {
     margin-bottom: 50px;
 }
 
+h1 {
+    color: #1e3a5f; /* Dark blue for main header */
+}
+
+h2 {
+    color: #4a6fa5; /* Medium blue for subtitle */
+}
+
+h3 {
+    color: #4a6fa5; /* Consistent blue for section titles */
+    margin-top: 30px;
+    border-bottom: 2px solid #4a6fa5; /* Underline section titles */
+    padding-bottom: 5px;
+}
+
+strong {
+    color: #81a4cd; /* Lighter blue for emphasizing key points */
+}
+
+/* Link styles */
+a {
+    color: #81a4cd;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #4a6fa5; /* Darker blue on hover */
+}
+
+/* List styles */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Contact section */
+.contact p {
+    margin: 10px 0;
+}
+
+/* Highlight specific project and experience achievements */
+.projects strong,
+.experience strong {
+    color: #81a4cd; /* Lighter blue for emphasis */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #888;
+}
